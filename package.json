@@ -1,0 +1,27 @@
+{
+  "name": "graphQL-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "compile": "tsc",
+    "start": "npm run compile && node ./dist/index.js",
+    "start:dev" : "node --watch dist/index.js",
+    "compile:ts" : "tsc --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.9.0",
+    "graphql": "^16.7.1",
+    "tsc-watch": "^6.0.4",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.7",
+    "nodemon": "^3.0.1",
+    "typescript": "^5.1.6"
+  }
+}
