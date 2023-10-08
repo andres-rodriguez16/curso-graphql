@@ -5,12 +5,14 @@ import { v1 as uuid } from "uuid"
 import { log } from "console";
 const books = [
   {
+    id : uuid(),
     title: 'The Awakening',
     author: 'Kate Chopin',
     year: 1986,
     edition: 'second'
   },
   {
+    id : uuid(),
     title: 'City of Glass',
     author: 'Paul Auster',
     year: 1953,
@@ -18,12 +20,14 @@ const books = [
 
   },
   {
+    id : uuid(),
     title: 'the Hunger games',
     author: 'Suzanne Collins',
     year: 2020,
     edition: "third"
   },
   {
+    id : uuid(),
     title: 'the hunger games catching fire',
     author: 'Suzanne Collins',
     edition: "third"

@@ -4,24 +4,28 @@ import { startStandaloneServer } from '@apollo/server/standalone';
 import { v1 as uuid } from "uuid";
 const books = [
     {
+        id: uuid(),
         title: 'The Awakening',
         author: 'Kate Chopin',
         year: 1986,
         edition: 'second'
     },
     {
+        id: uuid(),
         title: 'City of Glass',
         author: 'Paul Auster',
         year: 1953,
         edition: 'first'
     },
     {
+        id: uuid(),
         title: 'the Hunger games',
         author: 'Suzanne Collins',
         year: 2020,
         edition: "third"
     },
     {
+        id: uuid(),
         title: 'the hunger games catching fire',
         author: 'Suzanne Collins',
         edition: "third"
@@ -86,7 +90,6 @@ const resolvers = {
     },
     Mutation: {
         addBook: (root, args) => {
-            console.log(args, "arg");
             if (books.find(book => book.title === args.title)) {
                 throw new GraphQLError('Name must be unique', {
                     extensions: {
